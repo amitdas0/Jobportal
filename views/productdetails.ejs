@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <!-- header linking -->
+    <%- include('./common/header.ejs') %>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <h1><%=jobdata.jobtitle %></h1>
+                <p><%=jobdata.city %></p>
+                <p><%= jobdata.package %></p>
+                <p><img src="/<%= jobdata.uploadfile %>" height="70" width="100"></p>
+                <p>Experience : Minimum 2 Years</p>
+                <p>Job Location : New Delhi</p>
+                
+
+
+
+
+
+            </div>
+
+        </div>
+
+    </div>
+</body>
+</html>

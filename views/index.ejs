@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <link rel="stylesheet" href="asserts/css/index.css">
+
+    <style>
+        
+    </style>
+</head>
+<body>
+    <!-- header linking -->
+    <%- include('./common/header.ejs') %>
+
+<!-- banner section start -->
+    <div class="container-fluid banner">
+        <!-- first row start -->
+        <div class="row">
+            <div class="col-md-12">
+                <h3 style="text-align: center;  font-family: serif; color: white; font-size: 50px;">Exploring career opportunities ?</h3>
+    <h5 style="text-align: center;  font-family: sans-serif; color: white; font-weight: 900; ">Find Your Dream Job On<span style="font-family: Protest Guerrilla, sans-serif; color:#ffa500; letter-spacing: 0.9px;"> WorkWave</span></h5>
+            </div>
+        </div>
+        <!-- first row end -->
+
+        <!-- second row start -->
+    <div class="row mt-5">
+        <div class="col-md-3 col-sm-6">
+                <input type="text" name="date" placeholder="Job title,keywords.." style="width: 80%; padding-left: 40px;color: gray;">
+            </div>
+
+            <div class="col-md-3 col-sm-6">
+                <select style="width: 80%; height: 30px; padding-left: 40px;color: gray;">
+                    <option>Anywhere</option>
+                    <option>New Delhi</option>
+                    <option>Bangalore</option>
+                    <option>Calcutta</option>
+
+                </select>
+            </div>
+
+            <div class="col-md-3 col-sm-6">
+                <select style="width: 80%; height: 30px; padding-left: 40px;color: gray;">
+                    <option>Part time</option>
+                    <option>Full time</option>
+                    <option>Freelancer</option>
+                </select>
+            </div>
+
+            <div class="col-md-3 col-sm-6">
+                <button type="button" class="btn btn-outline-light btn-md">Search Job</button>
+
+            </div>
+                
+        
+    </div>
+        <!-- second row end -->
+
+
+
+
+    </div>
+<!-- banner section end -->
+
+
+<!-- recent jobs  section start-->
+<div class="container-fluid recentjobs mt-5">
+    <div class="row">
+        <h5 style="color: black; font-weight: 800;">Recent Jobs</h5>
+    
+    </div>
+    <!-- first row start -->
+    <div class="row  mb-5">
+        <% if(regdata.length>0){ %> 
+            <% for( var i=0; i<regdata.length; i++){%>
+        <div class="col-md-10 col-sm-10 info  mt-4">
+            <h4 style="font-weight: 800; color: #ffa500;"><%= regdata[i].jobtitle %>
+                <img src=" <%= regdata[i].uploadfile %>" height="80" width="100"></h4>
+           
+            
+        </div>
+        <div class="col-md-2 col-sm-2 p-2 info mt-4">
+            <a class="applyjob" href="/productdetails/<%= regdata[i].id %>"><button type="button" class="btn btn-primary btn-sm">Apply Job</button></a>
+         </div>
+        <div class="col-12 mb-2 info">
+            <i class="fa-sharp fa-solid fa-bag-shopping"></i> <%= regdata[i].package %>
+            &nbsp;&nbsp;<i class="fa-solid fa-location-dot"></i> <%= regdata[i].city %>
+        </div>
+        <%} %>
+    <% } else { %>
+        No record found
+    <%} %>
+    </div>
+    <!-- first row end -->
+
+    <!-- second row start -->
+        
+        
+    <!-- second row end -->
+
+    <!-- third row start -->
+    <!-- <div class="row info mt-4">
+        <div class="col-md-10 col-sm-10  mt-4">
+            <h4 style="font-weight: 800; color: #ffa500;">Full Stack Developer <button type="button" class="btn btn-light btn-sm">Full Time</button></h4>
+        </div>
+        <div class="col-md-2 col-sm-2 mt-4"><button type="button" class="btn btn-primary btn-sm">Apply Job</button></div>
+    </div> -->
+    <!-- third row end -->
+
+    <!-- fourth row start -->
+    <!-- <div class="row info">
+        <div class="col-md-10 mb-2">
+            <i class="fa-sharp fa-solid fa-bag-shopping"></i> Google.co
+            &nbsp;&nbsp;<i class="fa-solid fa-location-dot"></i> London ,UK
+        </div>
+
+    </div> -->
+    <!-- fourth row end -->
+
+    <!-- fifth row start -->
+    <!-- <div class="row info mt-4">
+        <div class="col-md-10 col-sm-10  mt-4">
+            <h4 style="font-weight: 800; color: #ffa500;">Open Source Interactive Developer<button type="button" class="btn btn-light btn-sm">Temporary</button></h4>
+        </div>
+        <div class="col-md-2 col-sm-2 mt-4"><button type="button" class="btn btn-primary btn-sm">Apply Job</button></div>
+    </div> -->
+    <!-- fifth row end -->
+
+    <!-- sixth row start -->
+    <!-- <div class="row info">
+        <div class="col-md-10 mb-2">
+            <i class="fa-sharp fa-solid fa-bag-shopping"></i> TLC
+            &nbsp;&nbsp;<i class="fa-solid fa-location-dot"></i> London ,UK
+        </div>
+
+    </div> -->
+    <!-- sixth row end -->
+
+    <!-- seventh row start -->
+    <!-- <div class="row info mt-4">
+        <div class="col-md-10 col-sm-10  mt-4">
+            <h4 style="font-weight: 800; color: #ffa500;">Back End Developer <button type="button" class="btn btn-light btn-sm">Freelance</button></h4>
+        </div>
+        <div class="col-md-2 col-sm-2 mt-4"><button type="button" class="btn btn-primary btn-sm">Apply Job</button></div>
+    </div> -->
+    <!-- seventh row end -->
+
+    <!-- eighth row start -->
+    <!-- <div class="row info">
+        <div class="col-md-10 mb-2">
+            <i class="fa-sharp fa-solid fa-bag-shopping"></i> Uranium
+            &nbsp;&nbsp;<i class="fa-solid fa-location-dot"></i> London ,UK
+        </div>
+
+    </div> -->
+    <!-- eighth row end -->
+
+    <!-- ninth row start -->
+    <!-- <div class="row info mt-4">
+        <div class="col-md-10 col-sm-10  mt-4">
+            <h4 style="font-weight: 800; color: #ffa500;">React Developer <button type="button" class="btn btn-light btn-sm">Full Time</button></h4>
+        </div>
+        <div class="col-md-2 col-sm-2 mt-4"><button type="button" class="btn btn-primary btn-sm">Apply Job</button></div>
+    </div> -->
+    <!-- eighth row end -->
+
+    <!-- tenth row start -->
+    <!-- <div class="row info">
+        <div class="col-md-10 mb-2">
+            <i class="fa-sharp fa-solid fa-bag-shopping"></i> Pixels
+            &nbsp;&nbsp;<i class="fa-solid fa-location-dot"></i> London ,UK
+        </div>
+
+    </div> -->
+    <!-- tenth row end -->
+
+
+
+
+
+</div>
+<!-- recent jobs  section end-->
+
+<!-- pagination section -->
+<div class="container-fluid">
+    <div class="row mt-5">
+        <nav>
+            <ul class="pagination pagination-sm justify-content-center">
+                <li class="page-item disabled">
+                    <a href="#" class="page-link">prev</a>
+                </li>
+                <li class="page-item">
+                    <a href="#" class="page-link">1</a>
+                </li>
+                <li class="page-item">
+                    <a href="#" class="page-link">2</a>
+                </li>
+                <li class="page-item ">
+                    <a href="#" class="page-link">Next</a>
+                </li>
+            </ul>
+        </nav>
+        
+        </div>
+
+</div>
+<!--pagination section end  -->
+
+<!-- carousal heading -->
+<div class="container-fluid carousalheading">
+    <div class="col-md-12">
+        <h5 style="text-align: center; font-weight: 800;">Happy Employers</h5>
+
+    </div>
+    
+</div>
+
+<!-- carousal container start -->
+<div class="container">
+    <div class="row py-3 justify-content-center maincarousalrow">
+        <div class="col-md-8">
+            <div id="mycarousel" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item em1" data-bs-interval="5000">
+                        <div class="row justify-content-center">
+
+                            <img src="asserts/images/employee1.jpg">
+                        </div>
+                        <div class="row">
+                                <h6 style="text-align: center;">Suzan Mathew</h6>
+                                <p style="text-align: center;">"Thanks to <span style="font-family: Protest Guerrilla, sans-serif; color: #ffa500;"> WorkWave</span><br> I landed my dream job in the tech industry!<br> The platform made the job search process seamless and efficient."</p>
+                        </div>
+                    </div>
+
+                    <div class="carousel-item active em1" data-bs-interval="3000">
+                        <div class="row justify-content-center">
+
+                            <img src="asserts/images/employee2.jpg">
+                        </div>
+                        <div class="row">
+                                <h6 style="text-align: center;">Andrew Tate</h6>
+                                <p style="text-align: center; font-weight: 600;">"<span style="font-family:Protest Guerrilla, sans-serif; color: #ffa500;">WorkWave</span>  exceeded my expectations! Within weeks of signing up,<br> I secured a position in my desired field.<br> Highly recommend it to job seekers."</p>
+                        </div>
+                    </div>
+                    <a href="#mycarousel" class="carousel-control-prev" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon"></span>
+                    </a>
+
+                    <a href="#mycarousel" class="carousel-control-next" data-bs-slide="next">
+                        <span class="carousel-control-next-icon"></span>
+                    </a>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
+</div>
+<!-- carousal container start -->
+
+<!-- why workwave section -->
+<div class="container-fluid yworkwave">
+<div class="row ww">
+    <div class="col-md-12 whyworkwave">
+        <h3 style="font-weight: 800; text-align: center;">
+            Why <span style="font-family:Protest Guerrilla, sans-serif; color: #ffa500;"> workwave</span>
+        </h3>
+    </div>
+
+</div>
+<!-- row section end -->
+
+    <!-- row section start -->
+    <div class="row justify-content-center firstcardsection">
+        <!-- card 1 start -->
+        <div class="col-md-3 col-sm-6"> 
+            <div class="card">
+                <i class="fa-sharp fa-solid fa-bag-shopping" style="font-size: 100px; text-align: center;"></i>
+            <div class="card-body">
+                <h4 class="card-title" style="text-align: center;"> Search Millions of Jobs</h4>
+                <h6 class="card-subtitle text-muted"style="text-align: center;">Across India</h6>
+                <br>
+
+                <p class="card-text"style="text-align: center;">"Discover jobs all over India! Explore diverse opportunities tailored to your skills. Start your search now!". </p>
+            </div>
+        </div>
+        </div>
+        <!-- card 1 end -->
+
+        <!-- card 2 start -->
+        <div class="col-md-3 col-sm-6"> 
+            <div class="card">
+                <i class="fa-regular fa-bell" style="font-size: 100px; text-align: center;"></i>
+            <div class="card-body">
+                <h4 class="card-title" style="text-align: center;">Job Alerts</h4>
+                <h6 class="card-subtitle text-muted"style="text-align: center;">Everyday</h6>
+                <br>
+
+                <p class="card-text"style="text-align: center;"> 
+                    "our personalized job alerts. Receive notifications tailored to your preferences,  </p>
+            </div>
+        </div>
+        </div>
+        <!-- card 2 end -->
+
+         <!-- card 3 start -->
+         <div class="col-md-3 col-sm-6"> 
+            <div class="card">
+                <i class="fa-solid fa-phone" style="font-size: 100px; text-align: center;"></i>
+            <div class="card-body">
+                <h4 class="card-title" style="text-align: center;">Customer Service</h4>
+                <h6 class="card-subtitle text-muted"style="text-align: center;">24x7</h6>
+                <br>
+
+                <p class="card-text"style="text-align: center;">Experience exceptional customer service with our dedicated support team.s</p>
+            </div>
+        </div>
+        </div>
+        <!-- card 3 end -->
+
+    </div>
+    <!-- row section end -->
+
+    <!-- row section start -->
+    <div class="row mt-4 justify-content-center secondcardsection">
+        <!-- card 5 start -->
+        <div class="col-md-3 col-sm-6"> 
+            <div class="card">
+                <i class="fa-solid fa-clipboard" style="font-size: 100px; text-align: center;"></i>
+            <div class="card-body">
+                <h4 class="card-title" style="text-align: center;">Application Process</h4>
+                <h6 class="card-subtitle text-muted"style="text-align: center;">Easy Apply</h6>
+                <br>
+
+                <p class="card-text"style="text-align: center;">With WorkWave, applying for jobs is quick and straightforward.The platform streamlines</p>
+            </div>
+        </div>
+        </div>
+        <!-- card 5 end -->
+
+        <!-- card 6 start -->
+        <div class="col-md-3 col-sm-6"> 
+            <div class="card">
+                <i class="fa-brands fa-searchengin" style="font-size: 100px; text-align: center;"></i>
+            <div class="card-body">
+                <h4 class="card-title" style="text-align: center;">Search Filters</h4>
+                <h6 class="card-subtitle text-muted"style="text-align: center;">Advance</h6>
+                <br>
+
+                <p class="card-text"style="text-align: center;">WorkWave offers advanced search filters, allowing you to refine your job search</p>
+            </div>
+        </div>
+        </div>
+        <!-- card 6 end -->
+
+         <!-- card 7 start -->
+         <div class="col-md-3 col-sm-6"> 
+            <div class="card">
+                <i class="fa-solid fa-plane-circle-check" style="font-size: 100px; text-align: center;"></i>
+            <div class="card-body">
+                <h4 class="card-title" style="text-align: center;">Top Careers</h4>
+                <h6 class="card-subtitle text-muted"style="text-align: center;">Across The Globe</h6>
+                <br>
+
+                <p class="card-text"style="text-align: center;">Discover Top Careers: Explore high-demand job opportunities and promising career paths</p>
+            </div>
+        </div>
+        </div>
+        <!-- card 7 end -->
+
+
+</div>
+<!-- why workwave end -->
+
+
+
+  
+
+
+<!-- footer linking -->
+        <%- include('./common/footer.ejs') %>
+</body>
+</html>

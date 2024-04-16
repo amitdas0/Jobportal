@@ -1,0 +1,112 @@
+/* *{box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+} */
+
+
+
+
+
+.navbar-brand{  font-family: "Protest Guerrilla", sans-serif;
+    font-weight: bolder;
+    color: #ffa500;
+    margin-left: 10px;
+    font-size: 30px;
+    letter-spacing: 0.9px;
+    
+
+}
+
+@media only screen and (min-width:768px){
+    .navbar-nav{margin-left: 40px;
+
+  }
+  .mainheader a{
+    margin-left: 15px;
+
+    
+  }
+
+  .btn{
+    margin-left: 20px;
+    border-radius: 0%;
+  }
+
+}
+
+.navbar-brand:hover{
+    color: #ffa500;
+    
+}
+
+.mainheader{color: white;
+            margin: 0px;
+            padding: 0px;
+            background-color: black;
+            
+    
+}
+
+.mainheader a{color: white;
+    font-family: sans-serif;
+        font-weight: 400;
+
+
+}
+
+.mainheader a:hover{color: #C0C0C0;
+
+}
+
+.navbar-toggler-icon{
+    background-color: white;
+}
+
+.mainmodal{
+    background-color:black;
+}
+
+.mainmodal h2{
+    color: #ffa500;
+    font-weight: 900;
+}
+
+.mainmodal input{
+    width: 50%;
+     padding-left: 40px;
+     color: gray;
+     margin-top: 50px;
+}
+
+.mainmodal p{
+    text-align: center;
+    margin-top: 80px;
+
+
+}
+
+.mainmodal a{
+    font-weight: 900;
+    color: #ffa500;
+    text-decoration: none;
+
+}
+
+.icon{
+    color: #ffa500; 
+    font-size: 30px; 
+;}
+
+
+
+.socialicon{
+    text-align: center;
+}
+
+.loginclosebtn{
+    background-color: #C0C0C0;
+    font-size: small;
+    margin-left: 250px;
+    border-radius: 0px;
+}
+

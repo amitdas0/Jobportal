@@ -1,0 +1,53 @@
+<style>
+    form label, input{
+        display: block;
+    }
+</style>
+
+<%- include('header.ejs') %>
+<%- include('leftmenu.ejs') %>
+
+<div class="container">
+    <div class="row mt-5">
+        <div class="col-3">
+
+        </div>
+        <div class="col-9">
+            <% if(regdata.length>0){ %>
+            <table class="table table-bordered">
+                <thead>
+                    <tr style="font-weight: 700;">
+                        
+                            <td>Jobtitle</td>
+                            <td>City</td>
+                            <td>Package</td>
+                            <td>File</td>
+
+                    </tr>
+
+                </thead>
+                <tbody>
+                    <% for( var i=0; i<regdata.length; i++){%>
+                        <tr>
+                            <td><%= regdata[i].jobtitle %></td>
+                            <td><%= regdata[i].city %></td>
+                            <td><%= regdata[i].package %></td>
+                            <td><img src="/<%= regdata[i].uploadfile %>" height="50" width="50">
+                            </td>
+
+                            <td>
+                                 <a class="btn btn-outline-dark" href="/delete3/<%= regdata[i].id %>">Delete</a>
+                                 <a class="btn btn-outline-dark" href="/update_jobs/<%= regdata[i].id %>">update</a>
+                            </td>
+
+                        </tr>
+                        <%} %>
+                </tbody>
+                
+            </table>
+            <% } else { %>
+            No record found
+        <%} %>
+        </div>
+    </div>
+</div>

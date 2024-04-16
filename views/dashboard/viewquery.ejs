@@ -1,0 +1,59 @@
+<div class="container-fluid">
+    <div class="row header">
+<%- include('header.ejs') %>
+<%- include('leftmenu.ejs') %>
+
+    </div>
+
+</div>
+<!-- header section linking -->
+
+<div class="container">
+    <div class="row mt-5">
+        <div class="col-3">
+
+        </div>
+        <div class="col-9">
+            <% if(regdata.length>0){ %>
+            <table class="table table-bordered">
+                <thead>
+                    <tr style="font-weight: 700;">
+                        <td>first_name</td>
+                            <td>last_name</td>
+                            <td>dob</td>
+                            <td>email</td>
+                            <td>password</td>
+                            <td>confirm_password</td>
+                    </tr>
+
+                </thead>
+                <tbody>
+                    <% for( var i=0; i< regdata.length; i++){%>
+                        <tr>
+                            <td><%= regdata[i].first_name %></td>
+                            <td><%= regdata[i].last_name %></td>
+                            <td>
+                                <% let date=new Date(regdata[i].dob);%>
+                                <%= date.toDateString()%>
+                                </td>
+                            <td><%= regdata[i].email %></td>
+                            <td><%= regdata[i].password %></td>
+                            <td><%= regdata[i].confirm_password %></td>
+                            <td>
+                             <a class=" btn btn-outline-dark" href="/delete/<%= regdata[i].id %>">Delete</a>
+                             <a class="btn btn-outline-dark" href="/update_jobs2/<%= regdata[i].id %>">update</a>
+                            </td>
+
+
+                        </tr>
+                        <%} %>
+                </tbody>
+                
+            </table>
+            <% } else { %>
+            No record found
+        <%} %>
+        </div>
+    </div>
+</div>
+

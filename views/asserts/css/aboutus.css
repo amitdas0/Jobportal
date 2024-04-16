@@ -1,0 +1,80 @@
+.fbanner{
+    background-image:linear-gradient(to top,rgba(0,0,0,0.5),rgba(0,0,0,0.5)) ,url(../images/aboutbanner.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    padding: 80px;
+}
+
+.homeabout a{
+    color: #c0c0c0;
+    text-decoration: none;
+}
+
+.homeabout a:hover{
+    color: #ffa500;
+
+}
+
+
+.about img{width: 100%;
+    
+
+}
+
+.aboutrow{
+    margin-left: 60px !important;
+
+}
+
+.about{
+    margin: 0px;
+    padding: 0px !important;
+}
+
+.abouttext{
+    padding: 20px;
+}
+
+.abouttext h1{
+    font-family: sans-serif;
+    font-weight: 800;
+}
+
+.abouttext p{
+    font-family: serif;
+    font-weight: 700;
+}
+
+.experience{background-color: black;
+    background-size:100%;
+    background-repeat: no-repeat;
+    margin-top: 140px;
+  
+  }
+  
+  .ex{
+    background-color: rgba(192,192,192,0.4);
+    height: 350px;
+    width: 300px;
+  
+  }
+
+  .workwavestats h4{
+    font-family: sans-serif;
+    color: #c0c0c0;
+    font-weight: 700;
+    text-align: center;
+
+
+  }
+
+  .ourteam{
+    margin-top: 120px;
+  }
+
+  .ourteamrow h2{text-align: center;
+    font-family: sans-serif;
+    font-weight: 600;
+
+  }
+  

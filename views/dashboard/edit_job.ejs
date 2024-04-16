@@ -1,0 +1,37 @@
+<style>
+    form label, input{
+        display: block;
+    }
+</style>
+
+<%- include('header.ejs') %>
+<%- include('leftmenu.ejs') %>
+
+
+<div class="container">
+    <div class="row mt-5">
+        <div class="col-3">
+
+        </div>
+        <div class="col-9">
+            <form method="post" enctype="multipart/form-data">
+                <label for="id">jobtitle</label>
+                <input type="text" name="Jobtitle" value="<%= regdata.jobtitle %>">
+
+                <label for="id">City</label>
+                <input type="text" name="city" placeholder="City" value="<%= regdata.city %>">
+
+                <label for="id">Package</label>
+                <input type="text" name="package" placeholder="Package" value="<%= regdata.package %>">
+
+                <label for="id">Upload File</label>
+                <input type="file" name="uploadfile" placeholder="Package" value="<%= regdata.uploadfile %>">
+
+
+                <button type="submit" class="btn btn-outline-primary">Update</button>
+
+
+            </form>
+        </div>
+    </div>
+</div>
